@@ -17,10 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('mobile', 'ProductsController@index');
-Route::get('cart', 'ProductsController@cart');
-Route::get('add-to-cart/{id}', 'ProductsController@addToCart');
-Route::patch('update-cart', 'ProductsController@update');
-Route::delete('remove-from-cart', 'ProductsController@remove');
-
+Route::resource('hard','category');
+Route::get('getsession','category@getsession');
+Route::get('storesession','category@storesession');
+Route::get('removesession','category@removesession');
